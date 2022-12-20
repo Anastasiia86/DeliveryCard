@@ -44,8 +44,7 @@ public class DeliveryCardTest {
             $(".calendar").sendKeys(Keys.ARROW_RIGHT);
         }
         $(".calendar").sendKeys(Keys.ENTER);
-        $("[data-test-id=name] input").setValue("Татьяна Петрова" +
-                "");
+        $("[data-test-id=name] input").setValue("Татьяна Петрова");
         $("[data-test-id=phone] input").setValue("+79092678989");
         $("[data-test-id=agreement]").click();
         $(".button").shouldHave(Condition.text("Забронировать")).click();
@@ -54,6 +53,7 @@ public class DeliveryCardTest {
         $("[data-test-id=notification]")
                 .shouldHave(Condition.text("Успешно! Встреча успешно забронирована на " + verificationDate),
                         Duration.ofSeconds(15));
+
     }
 
 }
