@@ -34,7 +34,7 @@ public class DeliveryCardTest {
     }
 
     @Test   //№2
-    public void shouldSuccessfulFormSubmissionAfterInteractingWithComplexElements() {
+    public void shouldSuccessfulFormSubmissionWithComplexElements() {
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Ха");
         $(Selectors.byText("Хабаровск")).click();
